@@ -22,7 +22,7 @@
         .envelope {
             width: 200px;
             height: 150px;
-            background-color: #ff5e5e;
+            background-color: #ff66b2; /* Różowa koperta */
             position: relative;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -68,7 +68,7 @@
         .btn {
             padding: 10px 20px;
             margin: 5px;
-            background-color: #ff5e5e;
+            background-color: #ff66b2; /* Dopasowany kolor przycisków */
             border: none;
             color: white;
             font-size: 18px;
@@ -78,7 +78,7 @@
         }
 
         .btn:hover {
-            background-color: #ff4040;
+            background-color: #ff3385;
         }
 
         .cat {
@@ -131,35 +131,5 @@
         <div class="message">Czy zostaniesz moją Walentynką?</div>
 
         <div class="buttons">
-            <button class="btn" id="yesBtn">Tak</button>
-            <button class="btn" id="noBtn">Nie</button>
-        </div>
+            <button
 
-        <div class="cat" id="happyCat"></div>
-        <div class="cat sad" id="sadCat"></div>
-    </div>
-
-    <script>
-        // Po kliknięciu "Otwórz", odwróć kopertę i pokaż pytanie
-        document.querySelector('.envelope').addEventListener('click', () => {
-            document.querySelector('.envelope').style.animation = 'openEnvelope 1.5s forwards';
-            setTimeout(() => {
-                document.querySelector('.message').style.display = 'block';
-                document.querySelector('.buttons').style.display = 'block';
-            }, 1500);
-        });
-
-        // Po kliknięciu "Tak", wyświetl szczęśliwego kotka
-        document.getElementById('yesBtn').addEventListener('click', () => {
-            document.getElementById('happyCat').style.display = 'block';
-            document.getElementById('sadCat').style.display = 'none';
-        });
-
-        // Po kliknięciu "Nie", wyświetl smutnego kotka
-        document.getElementById('noBtn').addEventListener('click', () => {
-            document.getElementById('sadCat').style.display = 'block';
-            document.getElementById('happyCat').style.display = 'none';
-        });
-    </script>
-</body>
-</html>
